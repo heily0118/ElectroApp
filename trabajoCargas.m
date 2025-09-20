@@ -1,1 +1,3 @@
-disp('Hola GitHub, este es mi primer archivo desde MATLAB 🚀');
+function W = trabajoCargas(q1, q2, q3, a)
+
+end
