@@ -3,15 +3,15 @@ function W = trabajoCargas(q1, q2, q3, a)
     % en los vértices de un triángulo equilátero de lado a.
     %
     % Entradas:
-    %   q1, q2, q3 - cargas (Coulomb)
-    %   a - longitud del lado del triángulo (metros)
+    %   q1, q2, q3 - cargas (Coulomb).
+    %   a - longitud del lado del triángulo (metros).
     %
     % Salida:
-    %   W - trabajo (Joules)
+    %   W - trabajo (Joules).
 
     % Constante de Coulomb
     k = 9e9; 
 
-    % Fórmula del trabajo en triángulo equilátero
+    % Fórmula del trabajo en un triángulo equilátero.
     W = k * (q1*q2 + q1*q3 + q2*q3) / a;
 end
