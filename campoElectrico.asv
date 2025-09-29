@@ -11,8 +11,8 @@ function Emagnitud = campoElectrico(a, h, q1, q2, q3, k, y_values)
    %   fija (a /2) y una y variable, entre 0 y h.
 
    % Variables de salida 
-   %   |E| en el punto p para cada coordenada.
-   %   Gráfico del E en función del valor de la coordenada y del punto p.
+Valor de la magnitud del campo |E| en el punto p para cada coordenada.
+
    
 end
 
