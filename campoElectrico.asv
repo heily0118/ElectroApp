@@ -28,23 +28,22 @@ function Emagnitud = campoElectrico(a, h, q1, q2, q3, k, coordY)
         % Distancias desde P a cada carga.
         r1 = sqrt((Px-0)^2 + (Py-0)^2); % Distancia de P a q1 en (0,0). 
         r2 = sqrt((Px-a)^2 + (Py-0)^2); % Distancia de P a q2 en (a,0).      
-        r3 = sqrt((Px-a/2)^2 + (Py-h)^2); % Distancia de P a q3 en (a/2,h).     
+        r3 = sqrt((Px-a/2)^2 + (Py-h)^2); % Distancia de P a q3 en (,0).     
 
-        % Vectores unitarios (dirección) desde cada carga hasta el punto P.
-        u1 = [(Px-0) (Py-0)]/r1; % Es la dirección desde q1 hasta el punto P.
-        u2 = [(Px-a) (Py-0)]/r2; % Es la dirección desde q2 hasta el punto P.
-        u3 = [(Px-a/2) (Py-h)]/r3; % Es la dirección desde q3 hasta el punto P.
+        % Vectores unitarios)
+        u1 = [(Px-0) (Py-0)]/r1;
+        u2 = [(Px-a) (Py-0)]/r2;
+        u3 = [(Px-a/2) (Py-h)]/r3; 
 
-        % Calcula los campos eléctricos individuales de cada carga en P.
-        E1 = k*q1/r1^2 * u1; % Es el campo eléctrico producido por q1.
-        E2 = k*q2/r2^2 * u2; % Es el campo eléctrico producido por q2.
-        E3 = k*q3/r3^2 * u3; % Es el campo eléctrico producido por q3.
+        % Campos individuales
+        E1 = k*q1/r1^2 * u1;
+        E2 = k*q2/r2^2 * u2;
+        E3 = k*q3/r3^2 * u3;
 
-        % Suma de los tres campos en total (vector) para obtener el campo
-        % en P.
+        % Campo total (vector)
         Evector = E1 + E2 + E3;
 
-        % Calcular la magnitud del campo usando la norma euclidiana.
+        % Magnitud del campo
         Emagnitud(i) = norm(Evector);
     end
 end
